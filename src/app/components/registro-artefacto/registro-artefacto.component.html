@@ -1,0 +1,41 @@
+
+<h2>Inventario de Artefactos</h2>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">NOMBRE DE ARTEFFACTO</th>
+    <th scope="col">MODELO</th>
+    <th scope="col">ESTADO</th>
+    <th scope="col">CANTIDAD</th>
+    <th scope="col">Ver detalles</th>
+    <th scope="col">Dar de baja artefacto</th>
+    <!--<th scope="col">Actualizar datos</th>-->
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let artefacto of artefactol; let i = index">
+
+    <th scope="row">{{i+1}}</th>
+      <td>{{artefacto.nombre}}</td>
+      <td>{{artefacto.modelo}}</td>
+      <td>{{artefacto.estado}}</td>
+      <td>{{artefacto.cantidad}}</td>
+
+
+    <td><a class="btn btn-primary" [routerLink]="['/artefacto',artefacto.id]" role="button">Detalles</a></td>
+    <td><button class="btn btn-primary" (click)="eliminarArtefacto(artefacto.id)"  role="button">Dar de Baja</button></td>
+    <!--<td><a class="btn btn-primary" [routerLink]="['/artefacto',artefacto.id]" role="button">Read</a>-->
+      <!--<a class="btn btn-primary" [routerLink]="['/personaActualizar',persona.id]" role="button">Actualizar</a>-->
+      <!--<button class="btn btn-primary" (click)="eliminarPersona(persona.id)"  role="button">Eliminar</button>-->
+    <!--</td>-->
+  </tr>
+  </tbody>
+
+</table>
+<hr>
+<button [routerLink]="['/registroArtefactos']" type="button" class="btn btn-primary">Agregar artefacto</button>
+
+
+

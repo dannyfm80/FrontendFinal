@@ -1,0 +1,20 @@
+<h1>{{persona.nombres}} <small>{{persona.ci}}</small></h1>
+<hr>
+
+<div class="row">
+  <div class="col-md-4">
+    <img src="assets/img/sinUsuario.png" class="img-fluid" [alt]="persona.nombres">
+    <br><br>
+    <a routerLink="/registroAccidente" class="btn btn-outline-danger">Regresar</a>
+  </div>
+  <div class="col-md-8">
+    <h3>{{persona.nombres}} {{persona.apellidos}}</h3>
+
+        <p class="text-left "><strong>Nombre Persona : </strong>{{persona.nombres}} {{persona.apellidos}}</p>
+        <p class="text-left "><strong>Telefono : </strong>{{persona.telefono}}</p>
+        <p class="text-left "><strong>Nacimiento : </strong>{{persona.nacimiento | date:'y-M-d'}}</p>
+        <p class="text-left "><strong>Direccion : </strong>{{persona.direccion}}</p>
+
+    <hr>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<h2>Nuevo Artefacto</h2>
+<form (ngSubmit)="crearArtefacto()" #forma="ngForm">
+  <div class="form-group row">
+    <label  class="col-sm-2 col-form-label">Nombre Artefacto</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control"  placeholder="nombre " [(ngModel)]="artefactoNew.nombre" name="nombres" required  >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label  class="col-sm-2 col-form-label">Modelo Artefacto</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control"  placeholder="Modelo " [(ngModel)]="artefactoNew.modelo" name="Modelo" required >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label  class="col-sm-2 col-form-label">Estado del artefacto </label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control"  placeholder="Estado" [(ngModel)]="artefactoNew.estado" name="Estado" required >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label  class="col-sm-2 col-form-label">Cantidad</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control"  placeholder="Cantidad" [(ngModel)]="artefactoNew.cantidad" name="Cantidad">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label  class="col-sm-2 col-form-label">Codigo</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control"  placeholder="Codigo" [(ngModel)]="artefactoNew.codigoArtefacto" name="codigo">
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button [disabled]="!forma.valid" type="submit" class="btn btn-primary">Agregar Artefacto</button>
+    </div>
+  </div>
+</form>
+<a routerLink="/registroArtefacto" class="btn btn-outline-danger">Ir al inventario</a>

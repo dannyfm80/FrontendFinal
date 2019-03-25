@@ -1,0 +1,22 @@
+<h1>{{artefacto.nombre}} </h1>
+<hr>
+
+<div class="row">
+
+  <div class="col-md-8">
+
+    <p class="text-left "><strong>Nombre Artefacto : </strong>{{artefacto.nombre}}</p>
+    <p class="text-left "><strong>Modelo : </strong>{{artefacto.modelo}}</p>
+    <p class="text-left "><strong>Cantidad : </strong>{{artefacto.cantidad}}</p>
+    <p class="text-left "><strong>Estado del Artefacto : </strong>{{artefacto.estado}}</p>
+    <p class="text-left "><strong>Codigo : </strong>{{artefacto.codigoArtefacto}}</p>
+
+    <hr>
+    <a routerLink="/registroArtefacto" class="btn btn-outline-danger">Ir al inventario</a>
+  </div>
+  <div class="col-md-4">
+    <!--<img src="assets/img/sinUsuario.png" class="img-fluid" [alt]="artefacto.nombre">-->
+    <br><br>
+    <!--<a routerLink="/registroArtefacto" class="btn btn-outline-danger">Regresar</a>-->
+  </div>
+</div>

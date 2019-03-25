@@ -1,0 +1,29 @@
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Nombres</th>
+    <th scope="col">Carnet</th>
+    <th scope="col">Telefono</th>
+    <th scope="col">Direccion</th>
+    <th scope="col">Nacimiento</th>
+    <th scope="col">Acciones</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let persona of personal; let i = index">
+    <th scope="row">{{i+1}}</th>
+    <td>{{persona.nombres+' '+persona.apellidos}}</td>
+    <td>{{persona.ci}}</td>
+    <td>{{persona.telefono}}</td>
+    <td>{{persona.direccion}}</td>
+    <td>{{persona.nacimiento | date:'y-M-d'}}</td>
+    <td><a class="btn btn-primary" [routerLink]="['/persona',persona.id]" role="button">Ver</a>
+        <a class="btn btn-primary" [routerLink]="['/personaActualizar',persona.id]" role="button">Actualizar</a>
+        <button class="btn btn-primary" (click)="eliminarPersona(persona.id)"  role="button">Eliminar</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<hr>
+<button [routerLink]="['/registroPersona']" type="button" class="btn btn-primary">Crear</button>
